@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.MainController" prefWidth="900" prefHeight="600">
+    
+    <!-- Верхняя панель: Поиск и фильтры -->
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+            <Label text="Поиск:"/>
+            <TextField fx:id="searchField" promptText="Введите предмет..." prefWidth="200"/>
+            
+            <Label text="Статус:"/>
+            <ComboBox fx:id="statusFilter" prefWidth="150"/>
+            
+            <Button fx:id="resetFiltersBtn" text="Сбросить" />
+        </HBox>
+    </top>
+
+    <!-- Центр: Таблица -->
+    <center>
+        <TableView fx:id="gradesTable">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="studentColumn" text="ID Ученика" prefWidth="100"/>
+                <TableColumn fx:id="subjectColumn" text="Предмет" prefWidth="200"/>
+                <TableColumn fx:id="valueColumn" text="Оценка" prefWidth="80"/>
+                <TableColumn fx:id="dateColumn" text="Дата" prefWidth="120"/>
+                <TableColumn fx:id="statusColumn" text="Статус" prefWidth="120"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <!-- Низ: Кнопки действий -->
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+            <Button fx:id="addBtn" text="Добавить оценку" />
+            <Button fx:id="editBtn" text="Редактировать" />
+            <Button fx:id="deleteBtn" text="Удалить" />
+            <Button fx:id="statsBtn" text="Статистика" />
+            <Button fx:id="exportBtn" text="Экспорт в CSV" />
+        </HBox>
+    </bottom>
+    
+</BorderPane>

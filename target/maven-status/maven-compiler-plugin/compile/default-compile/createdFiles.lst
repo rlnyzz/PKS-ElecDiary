@@ -1,0 +1,16 @@
+controller\GradeDialogController$1.class
+controller\GradeDialogController$2.class
+service\GradeService.class
+db\DatabaseConnection.class
+model\Grade.class
+service\StudentService.class
+dao\GradeDao.class
+dao\StudentDaoImpl.class
+controller\MainController.class
+model\Student.class
+model\GradeStatus.class
+StudentHubFxApplication.class
+controller\GradeDialogController.class
+exception\ValidationException.class
+dao\StudentDao.class
+dao\GradeDaoImpl.class
